@@ -1,0 +1,110 @@
+*{
+    font-family: Arial;
+    
+}
+
+h1,h2{
+    color: #b92b27;
+}
+
+#login {
+    background-color: white;
+    color: brown;
+}
+
+#signup {
+    background-color: #b92b27;
+    color: white;
+}
+
+.upvote{
+    background-color: aquamarine;
+    color: tomato
+}
+
+.answer {
+    background-color: goldenrod;
+    color: white;
+}
+
+/* descendant selectors --> all those <a> tags inside <p> tags must be styled in a way */
+/* p a{
+    color:yellow;
+    background-color: purple;
+} */
+
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+
+nav ul li{
+    color: darksalmon;
+}
+
+/* sibling combinator */
+
+p + h2{
+    text-decoration-line: underline;
+}
+
+.upvote + button{
+    color: black;
+    background-color: white;
+}
+
+
+/* Child Combinator */
+div > input{
+    background-color:wheat
+}
+
+/* Attribute Selector */
+
+input[type="text"]{
+    color: red;
+}
+
+input[type=password]{
+    color: brown;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+h2:hover{
+    text-decoration: none;
+}
+
+button:active{
+    background-color: hotpink;
+}
+
+p:active{
+    font-weight: bold;
+    color: aqua;
+}
+
+input[type="radio"]:checked + label {
+    color: red;
+    font-weight:bold;
+}
+
+div:nth-of-type(2n){
+    background-color: lightcoral;
+}
+
+h1::first-letter{
+    color: black;
+}
+
+#new::first-line{
+    background-color: black;
+    color: white;
+}
+
+p::selection{
+    background-color: gold;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <link rel="stylesheet" href="position.css">
+</head>
+<body>
+    <section>
+        <h2>static demo</h2>
+        <div></div>
+        <div id="static"></div>
+        <!-- for static, nothing happens as it keeps the element in the initial phase. -->
+    </section>
+    <section>
+        <h2>relative demo</h2>
+        <div></div>
+        <div id="relative"></div>
+        <div></div>
+        <!-- for relative, the space is created. So, 2nd div's position is vacant. -->
+    </section>
+    <section>
+        <h2>absolute demo</h2>
+        <div></div>
+        <div id="absolute"></div>
+        <div></div>
+        <!-- for absolute no any space is created. So, the third div is in 2nd position. -->
+    </section>
+    <section>
+        <h2>fixed demo</h2>
+        <div></div>
+        <div id="fixed">fixed</div>
+        <!-- for fixed, same as absolute, no space created unless ancestors contain some properties like transform, perspctive or filter to "none". If so, its center of refrence is its ancestral point.  -->
+    </section>
+
+    <!-- position: sticky or fixed are same -->
+    <!-- mostly used for navigation bar -->
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons</title>
+</head>
+<body>
+    <form action="/server">
+        <div>
+            <input type="checkbox" name="fruit" id="apple" value="apple" checked>
+            <label for="apple">Apple</label><br>
+            <input type="checkbox" name="fruit" id="mango" value="mango">
+            <label for="mango">Mango</label><br>
+            <input type="checkbox" name="fruit" id="litchi" value="litchi">
+            <label for="litchi">Litchi</label>
+        </div>
+        <br>
+        <div>
+            <input type="radio" name="gender" id="male" value="m">
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="female" value="f">
+            <label for="female">female</label>
+            <input type="radio" name="gender" id="other" value="o">
+            <label for="other">other</label>
+        </div>
+        <hr>
+        <div>
+            Choose your profession: 
+            <Select name="profession" id="profession">
+                <option>Select</option>
+                <option value="student">Student</option>
+                <option value="developer">Developer</option>
+            </Select>
+        </div>
+        <label for="age">Select you age</label>
+        <input type="range" id="age" name="age" min="18" max="35" step="1" value="18">
+        <hr><br>
+        <label for="feedback">How productive is this developer?</label>
+        <textarea id="feedback" name="feedback" rows="5" cols="50"></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

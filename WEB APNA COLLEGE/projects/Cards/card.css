@@ -1,0 +1,51 @@
+h1 {
+    text-align: center;
+    background-color: red;
+    color: white;
+}
+body{
+    background-color: grey;
+}
+
+#outdiv {
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 12px;
+    margin: auto;
+    padding: 5px 4px 8px 4px; 
+    background-color: whitesmoke;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.text {
+    font-size: 12px;
+    text-align: left;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 2px;
+    margin: 2px;
+    color: grey;
+}
+
+p {
+    font-size: smaller;
+}
+
+button {
+    background-color: rgb(184, 222, 237);
+    color: rgb(7, 84, 114);
+    font-size: 11px;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 4px 7px 4px;
+}
+
+.button {
+    text-align: center;
+}
+
+ 

@@ -1,0 +1,17 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: #1b74e4;
+    text-decoration-line: none;
+}
+
+#searchbox {
+    background-color: black;
+    color: white;
+}
+
+#login {
+    background-color: aqua;
+}

@@ -1,0 +1,40 @@
+.box {
+    height: 200px;
+    width: 300px;
+    background-color: palevioletred;
+    animation-name: fontAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes fontAnimation {   /*Here the fontAnimation is the name used in animation-name property*/ 
+    /* from {
+        font-size: 20px;
+    }
+    to {
+        font-size: 50px;
+        background-color: aqua;
+        height: 300px;
+        width: 400px;
+    } */
+
+    /* Instead of from and to, we can use % in animations */
+
+    0% {
+        font-size: 20px; 
+    }
+
+    50% {
+        font-size: 50px;
+        background-color: aqua;
+    }
+
+    100% {
+        height: 300px;
+        width: 400px;
+    }
+
+}

@@ -1,0 +1,30 @@
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+h1{ 
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+style{
+    height: fit-content;
+    width: fit-content;
+}
+
+ul{
+    text-align: center;
+}
+
+/* #1{
+    font-family: cursive;
+} */
+
+.BODY{
+    color: green;
+}
+
+p{
+    text-align: center;
+}

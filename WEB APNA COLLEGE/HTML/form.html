@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+            <!--click on username and direct to enter in box-->
+    <form action="/action"> 
+        <label>
+            USERNAME <input type="text" placeholder="uid"> <br>     
+        </label>
+        <label>
+            PASSWORD <input type="password" placeholder="PASS"> <br>
+        </label>
+        <label>
+            CONTACT  <input type="number" placeholder="Mobile"> <br>
+        </label>         
+    </form>
+    <hr>
+    <br>
+    <form action="/action">
+        <div>
+            <label for="username">USERNAME:</label>
+            <input type="text" id="username" placeholder="UID">
+        </div>
+        
+        <div>
+            <label for="password">PASSWORD:</label>
+            <input type="password" id="password" placeholder="pass">
+        </div>
+        
+        <div>
+            <label for="age">AGE:</label>
+            <input type="number" placeholder="age" id="age">
+        </div>
+        <b>GOOD WAY</b>
+        <button type="submit">SUBMIT</button>
+        <button type="button">General type</button>
+        <button type="reset">reset</button>
+        <br><br>
+        <input type="button">
+        <input type="submit">
+        Not a good way
+    </form>
+    <hr>
+    <br>
+
+    <form action="/action">
+        <div>
+            <label for="username">USERNAME:</label>
+            <input type="text" id="username" placeholder="UID" name="user">
+        </div>
+        
+        <div>
+            <label for="password">PASSWORD:</label>
+            <input type="password" id="password" placeholder="pass" name="pass">
+        </div>
+        <button type="submit">SUBMIT</button>
+    </form>
+    <hr>
+    <br>
+    <form action="https://www.youtube.com/results">
+        <input type="text" placeholder="search in youtube" name="search_query">
+        <button>&#128269;</button>
+    </form>
+    <hr>
+    <br>
+</body>
+</html>
