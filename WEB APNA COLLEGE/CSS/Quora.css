@@ -19,3 +19,39 @@ h1,h3{
     background-color: green;
     color: aliceblue;
 }
+
+/* Descendant Selector */
+.post a{
+    color: purple;
+    background-color: yellow;
+}
+
+/* can be written as "nav a" as well */
+nav ul li a{
+    color: hotpink;
+}
+
+p + h3{
+    text-decoration: underline;
+}
+
+.upvote + button{
+    background-color: cornflowerblue;
+    color: darkblue;
+}
+
+div>input{
+    background-color: darksalmon;
+}
+
+input[type="text"]{
+    color: green;
+}
+
+input[type="password"]{
+    color: red;
+}
+
+input[type]{
+    background-color: ghostwhite;
+}
