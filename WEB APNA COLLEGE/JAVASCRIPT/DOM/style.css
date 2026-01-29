@@ -1,3 +1,16 @@
+.red{
+  color: red;
+}
+
+.blue{
+  color: blue;
+}
+
+.div1{
+  background-color: pink;
+  border: 2px solid black;
+}
+
 body {
   font-family: Arial;
 }
