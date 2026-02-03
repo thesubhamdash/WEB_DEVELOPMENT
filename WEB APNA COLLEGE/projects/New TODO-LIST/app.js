@@ -15,11 +15,21 @@ btn.addEventListener("click", function(){
     inp.value="";
 });
 
+//Event Delegation through event bubbling
+
+ul.addEventListener("click", function(event){
+    if(event.target.nodeName == "BUTTON"){
+        let listItem = event.target.parentElement;
+        listItem.remove();
+    }
+});
+
 //remove only the existing elements, not the newly added!
-let dltbtns = document.querySelectorAll(".delete");
-for (dltBtn of dltbtns){
-    dltBtn.addEventListener("click", function(){
-        let par = this.parentElement;
-        par.remove();
-    });
-}
+
+// let dltbtns = document.querySelectorAll(".delete");
+// for (dltBtn of dltbtns){
+//     dltBtn.addEventListener("click", function(){
+//         let par = this.parentElement;
+//         par.remove();
+//     });
+// }
