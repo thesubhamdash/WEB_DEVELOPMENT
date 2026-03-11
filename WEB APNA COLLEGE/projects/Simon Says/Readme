@@ -68,7 +68,7 @@ project-folder/
 │
 ├── index.html       # Main HTML file
 ├── style.css        # Game styling
-├── script.js        # Game logic
+├── app.js           # Game logic
 └── README.md        # Project documentation
 └── SS1 (1).png      # Preview before game starts
 └── SS1 (2).png      # First gameplay with a score!
