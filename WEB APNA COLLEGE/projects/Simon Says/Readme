@@ -64,7 +64,7 @@ https://thesubhamdash.github.io/simon-says-game/
 
 ## 📂 Project Structure
 
-project-folder/
+Simon Says/
 │
 ├── index.html       # Main HTML file
 ├── style.css        # Game styling
