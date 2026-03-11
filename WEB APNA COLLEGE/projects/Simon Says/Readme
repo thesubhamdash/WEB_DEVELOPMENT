@@ -1,0 +1,103 @@
+# Simon Says Game 🎮
+
+A browser-based **Simon Says memory game** built using **HTML, CSS, and JavaScript**.
+The game challenges players to remember and repeat an increasing sequence of colors.
+
+---
+
+## 🎯 Game Objective
+
+The goal of the game is to **repeat the color pattern correctly** as it grows longer each level.
+
+* Watch the color sequence carefully
+* Repeat the sequence by clicking the buttons
+* Each correct round increases the level
+* If you press the wrong color, the game ends
+
+Try to achieve the **highest score possible!**
+
+---
+
+## 🚀 Live Demo
+
+Play the game here:
+
+https://thesubhamdash.github.io/simon-says-game/
+
+---
+
+## 🕹️ How to Play
+
+1. Press **any key** to start the game.
+2. The game will highlight a **random color**.
+3. Remember the sequence of colors.
+4. Click the buttons in the **same order**.
+5. Each level adds a new color to the pattern.
+6. If you click the wrong color, the **game ends**.
+
+---
+
+📸 Game Screenshots
+![Game Page Preview](SS1 (1).png)
+![Game Over First Round](SS1 (2).png)
+![Game Over Second Round with Max score retained!](SS1 (3).png)
+
+
+## ✨ Features
+
+* 🎨 Color pattern memory gameplay
+* 📈 Level-based difficulty increase
+* 🏆 Score tracking system
+* 🥇 Max score tracking
+* ⚡ Button flash animations
+* 🔄 Restart after game over
+
+---
+
+## 🛠️ Technologies Used
+
+* **HTML** – Structure of the game
+* **CSS** – Styling and animations
+* **JavaScript** – Game logic and interactivity
+
+---
+
+## 📂 Project Structure
+
+project-folder/
+│
+├── index.html       # Main HTML file
+├── style.css        # Game styling
+├── script.js        # Game logic
+└── README.md        # Project documentation
+└── SS1 (1).png      # Preview before game starts
+└── SS1 (2).png      # First gameplay with a score!
+└── SS1 (3).png      # Max score still retained even after another round played!
+
+---
+
+## 🧠 Game Logic Overview
+
+1. The game generates a **random color** each level.
+2. The sequence is stored in an array.
+3. The player must repeat the same sequence.
+4. If the input matches the sequence → next level starts.
+5. If the input is incorrect → **Game Over** and score resets.
+
+---
+
+## 📈 Future Improvements
+
+Possible upgrades for the game:
+
+* Add sound effects
+* Improve UI design
+* Add mobile-friendly layout
+* Add difficulty modes
+* Add leaderboard system
+
+---
+
+## 📜 License
+
+This project is open-source and available for learning and educational purposes.
