@@ -8,8 +8,19 @@ const connection = mysql.createConnection({
     password : 'MrDash@4816'
 });
 
+// let q="SHOW TABLES";
+// let q = "INSERT INTO user (id, username, email, password) VALUES (?, ?, ?, ?)";
+// let user = ["123", "123_newuser", "abc@gmail.com", "abc"];
+
+let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+let users = [["101", "123_newusera", "abc@gmail.com", "abc"],
+             ["102", "123_newuserb", "abcb@gmail.com", "abcb"],
+             ["103", "123_newuserc", "abcc@gmail.com", "abcc"],
+];
+
+
 try{
-    connection.query("SHOW TABLES", (err, result) => {
+    connection.query(q, [users], (err, result) => {
         console.log(result);
     });
 } catch(err){
