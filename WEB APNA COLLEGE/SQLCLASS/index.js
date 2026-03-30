@@ -4,6 +4,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override") 
+require("dotenv").config();
 
 app.use(methodOverride("_method"));
 app.use(express.urlencoded({extended: true}));
@@ -11,10 +12,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
 const connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    database : 'delta_app',
-    password : 'MrDash@4816'
+    host : process.env.DB_HOST,
+    user : process.env.DB_USER,
+    database : process.env.DB_NAME,
+    password : process.env.DB_PASSWORD
 });
 
 // let q="SHOW TABLES";
