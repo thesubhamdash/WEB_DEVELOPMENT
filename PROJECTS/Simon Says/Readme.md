@@ -22,7 +22,7 @@ Try to achieve the **highest score possible!**
 
 Play the game here:
 
-https://thesubhamdash.github.io/WEB_DEVELOPMENT/WEB%20APNA%20COLLEGE/projects/Simon%20Says/
+https://thesubhamdash.github.io/WEB_DEVELOPMENT/projects/Simon%20Says/
 
 ---
 
