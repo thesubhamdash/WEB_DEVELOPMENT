@@ -1,16 +1,23 @@
 const express = require("express");
 const app = express();
 
-app.use((req, res, next) => {
-    console.log("middleware 1");
-    next();
-    console.log("After next of 1st MW");
-});
+// app.use((req, res, next) => {
+//     console.log("middleware 1");
+//     next();
+//     console.log("After next of 1st MW");
+// });
 
-app.use((req, res, next) => {
-    console.log("middleware 2");
-    return next();
-    console.log("After next of 2nd MW; but doesn't run any code");
+// app.use((req, res, next) => {
+//     console.log("middleware 2");
+//     return next();
+//     console.log("After next of 2nd MW; but doesn't run any code");
+// });
+
+//logger
+app.use( (req, res, next) => {
+    req.time = new Date(Date.now());
+    console.log(req.method, req.hostname, req.path, req.time);
+    next();
 });
 
 app.get("/", (req,res) => {
