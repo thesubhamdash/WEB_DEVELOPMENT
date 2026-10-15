@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const ExpressError = require("./ExpressError");
 
 // app.use((req, res, next) => {
 //     console.log("middleware 1");
@@ -27,7 +28,8 @@ const checkToken = (req, res, next) =>{
     if(token === "giveaccess"){
         next();
     }
-    res.send("Access Denied!");
+    // res.send("Access Denied!");
+    throw new ExpressError(401, "Access Denied!");
 };
 
 //logger
@@ -48,7 +50,7 @@ app.get("/", (req,res) => {
 
 
 // API access token
-app.get("/", checkToken, (req, res)=> {
+app.get("/api", checkToken, (req, res)=> {
     res.send("data");
 });
 
@@ -56,10 +58,20 @@ app.get("/random", (req,res) => {
     res.send("Hi, This is random");
 });
 
-// Error 404
-app.use((req, res) => {
-    res.status(404).send("Page not found!");
+app.get("/wrong", (req,res) => {
+    abcd = abcd;
 });
+
+// Custom Error Handling
+app.use((err, req, res, next) => {
+    console.log("---------error----------");
+    res.send(err);
+});
+
+// Error 404
+// app.use((req, res) => {
+//     res.status(404).send("Page not found!");
+// });
 
 app.listen(8080, ()=> {
     console.log("Server listening to port 8080");
