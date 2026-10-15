@@ -64,8 +64,8 @@ app.get("/wrong", (req,res) => {
 
 // Custom Error Handling
 app.use((err, req, res, next) => {
-    console.log("---------error----------");
-    res.send(err);
+    let{status=500, message="Some error occurred"} = err;
+    res.status(status).send(message);
 });
 
 // Error 404
