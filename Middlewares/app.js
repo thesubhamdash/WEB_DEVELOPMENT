@@ -13,10 +13,24 @@ const app = express();
 //     console.log("After next of 2nd MW; but doesn't run any code");
 // });
 
+
+app.use("/api", (req, res, next) =>{
+    let {token} = req.query;
+    if(token === "giveaccess"){
+        next();
+    }
+    res.send("Access Denied!");
+});
+
 //logger
-app.use( (req, res, next) => {
+app.use("/", (req, res, next) => {
     req.time = new Date(Date.now());
     console.log(req.method, req.hostname, req.path, req.time);
+    next();
+});
+
+app.use("/random", (req, res, next) => {
+    console.log("This is only for random");
     next();
 });
 
@@ -24,8 +38,19 @@ app.get("/", (req,res) => {
     res.send("Hi, I am a problem solver!");
 });
 
+
+// API access token
+app.get("/", (req, res)=> {
+    res.send("data");
+});
+
 app.get("/random", (req,res) => {
     res.send("Hi, This is random");
+});
+
+// Error 404
+app.use((req, res) => {
+    res.status(404).send("Page not found!");
 });
 
 app.listen(8080, ()=> {
