@@ -14,13 +14,21 @@ const app = express();
 // });
 
 
-app.use("/api", (req, res, next) =>{
+// app.use("/api", (req, res, next) =>{
+//     let {token} = req.query;
+//     if(token === "giveaccess"){
+//         next();
+//     }
+//     res.send("Access Denied!");
+// });
+
+const checkToken = (req, res, next) =>{
     let {token} = req.query;
     if(token === "giveaccess"){
         next();
     }
     res.send("Access Denied!");
-});
+};
 
 //logger
 app.use("/", (req, res, next) => {
@@ -40,7 +48,7 @@ app.get("/", (req,res) => {
 
 
 // API access token
-app.get("/", (req, res)=> {
+app.get("/", checkToken, (req, res)=> {
     res.send("data");
 });
 
