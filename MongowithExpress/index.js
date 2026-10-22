@@ -90,6 +90,8 @@ app.get("/chats/:id", asyncWrap(async(req, res) => {
     res.render("editChat.ejs", {chat});
 }));
 
+
+//WrapAsync Error Handler
 function asyncWrap(fn){
     return function(req, res, next){
         fn(req, res, next).catch(err => next(err));
@@ -108,7 +110,6 @@ app.put("/chats/:id", asyncWrap(async (req,res) => {
     let {id} = req.params;
     let {newMsg} = req.body;
     let updatedChat = await Chat.findByIdAndUpdate(id, {message: newMsg}, {runValidators: true, returnDocument:"after"}); 
-
     console.log(updatedChat);
     res.redirect("/chats");
 }));
@@ -125,6 +126,21 @@ app.delete("/chats/:id", asyncWrap(async (req,res) =>{
 app.get("/", (req,res)=>{
     res.send("root is working");
 });
+
+const handleValidationErr = (err) => {
+    console.log("This was a Validation Error. Please follow rules");
+    console.dir(err.message);
+    return err;
+}
+
+//Name of error
+app.use((err, req, res, next) => {
+    console.log(err.name);
+    if(err.name === "ValidationError"){
+        err = handleValidationErr(err);
+    }
+    next(err);
+})
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
